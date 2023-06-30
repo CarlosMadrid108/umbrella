@@ -1,0 +1,742 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    text-decoration: none;
+    list-style: none;
+}
+
+.lato {
+    font-family: 'Lato', sans-serif
+}
+
+
+/* HEADER */
+
+header img {
+    width: 140px;
+}
+
+input[type=search] {
+    padding: 6px;
+    border: none;
+    font-size: 17px;
+    display: none;
+}
+
+.top-nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #b70f0a;
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: #FFF;
+    height: 50px;
+    padding: 1em;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.menu>li {
+    margin: 0 1rem;
+    overflow: hidden;
+}
+
+.menu-button-container {
+    display: none;
+    height: 100%;
+    width: 30px;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after {
+    display: block;
+    background-color: #fff;
+    position: absolute;
+    height: 4px;
+    width: 30px;
+    transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    border-radius: 2px;
+}
+
+.menu-button::before {
+    content: '';
+    margin-top: -8px;
+}
+
+.menu-button::after {
+    content: '';
+    margin-top: 8px;
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::before {
+    margin-top: 0px;
+    transform: rotate(405deg);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button {
+    background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked+.menu-button-container .menu-button::after {
+    margin-top: 0px;
+    transform: rotate(-405deg);
+}
+
+@media (max-width: 700px) {
+    .menu-button-container {
+        display: flex;
+    }
+
+    .menu {
+        position: absolute;
+        top: 0;
+        margin-top: 50px;
+        left: 0;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #menu-toggle~.menu li {
+        height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    #menu-toggle:checked~.menu li {
+        border: 1px solid #333;
+        height: 2.5em;
+        padding: 0.5em;
+        transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .menu>li {
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding: 0.5em 0;
+        width: 100%;
+        color: white;
+        background-color: #222;
+    }
+
+    .menu>li:not(:last-child) {
+        border-bottom: 1px solid #444;
+    }
+}
+
+.colortitulos {
+    color: #b70f0a;
+}
+
+/* INDEX */
+
+
+.imgprincipal {
+    width: 100%;
+    height: 208px;
+    background-image: url(../img/ciencia.png);
+    background-size: cover;
+    background-position: right;
+    margin-bottom: 50px;
+}
+
+.lema {
+    width: 120px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: italic;
+    color: azure;
+    text-shadow: 2px 2px 4px #000000;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+
+.index_noticias {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #606060;
+    border-bottom: 1px solid #606060;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 10px;
+
+}
+
+.index_noticias h2 {
+    font-family: 'Lato', sans-serif;
+    color: #232323;
+    font-size: 24px;
+}
+
+.index_noticias p {
+    font-family: 'Lato', sans-serif;
+    color: #606060;
+}
+
+.index_noticias span {
+    font-family: 'Lato', sans-serif;
+    font-weight: 900;
+    color: #606060;
+}
+
+.index_subnoticias {
+    display: none
+}
+
+.imgnoticias {
+    display: flex;
+    align-items: end;
+    max-width: 100%;
+    height: 250px;
+    background-image: url("../img/spencer.png");
+    background-size: cover;
+    background-position: 0px -20px;
+
+}
+
+.imgnoticias h1 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+
+}
+
+.index_voluntarios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.index_voluntarios h2 {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.index_voluntarios p {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    color: #606060;
+}
+
+.index_voluntarios span {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 12px;
+    color: #606060;
+}
+
+.img_voluntarios {
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/voluntarios.png);
+    background-size: cover;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: #b70f0a;
+    color: #FFF;
+    padding: 20px;
+    font-family: 'Lato', sans-serif;
+    gap: 20px;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer_redes {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.footer_nav {
+    display: none;
+}
+
+
+
+/* NUESTRA HISTORIA */
+
+.nuestra-historia_titulo {
+    display: none;
+}
+
+
+.imghistoria {
+    width: 100%;
+    height: 208px;
+    background-image: url(../img/imghistoria.png);
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+
+.imghistoria h1 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.historialema {
+    width: 362px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: italic;
+    color: azure;
+    text-shadow: 2px 2px 4px #000000;
+    padding-left: 100px;
+    padding-top: 100px;
+    display: none;
+
+}
+
+.nuestra-historia_articulo {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    gap: 15px;
+    font-family: 'Lato', sans-serif;
+}
+
+.nuestra-historia_articulo h2 {
+    font-size: 24px;
+    color: #232222;
+    text-align: center;
+}
+
+.nuestra-historia_articulo p {
+    color: #606060;
+}
+
+.nuestra-historia_articulo span {
+    color: #232222;
+    text-align: center;
+    font-weight: 900;
+}
+
+
+
+/* NUESTRAS NOTICIAS */
+
+.nuestras-noticias_titulo {
+    display: none;
+}
+
+.nuestras-noticias_secundaria {
+    display: none;
+}
+
+.nuestras-noticias_principal {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-family: 'Lato', sans-serif;
+}
+
+.nuestras-noticias_principal img {
+    width: 100%;
+}
+
+.nuestras-noticias_principal article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 50px;
+}
+
+.nuestras-noticias_bordes {
+    padding-top: 50px;
+    border-top: solid black 1px;
+}
+
+.nuestras-noticias_principal h2 {
+    font-size: 24px;
+    color: #232222;
+}
+
+.nuestras-noticias_principal p {
+    color: #606060;
+}
+
+.nuestras-noticias_principal span {
+    color: #606060;
+    font-weight: 900;
+}
+
+
+/* NUESTRAS COMPAÑÍAS */
+
+.companias_titulo {
+    display: none;
+}
+
+.img_companias {
+
+    background-image: url(../img/edificio.jpg);
+    width: 100%;
+    height: 208px;
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+
+.img_companias h1 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.companias_titulo-articulo {
+    display: flex;
+    flex-direction: column;
+    margin-right: 35px;
+    margin-left: 35px;
+    gap: 10px;
+    font-family: 'Lato', sans-serif;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.companias_titulo-articulo h2 {
+    color: #232222;
+}
+
+.companias_titulo-articulo p {
+    color: #606060;
+}
+
+.companias_companias {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-family: 'Lato', sans-serif;
+
+}
+
+.companias_companias article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: solid #606060 1px;
+}
+
+.companias_companias-titulos {
+    display: none;
+}
+
+.companias_companias p {
+    color: #606060;
+}
+
+.companias_farmaceutica {
+    display: flex;
+    align-items: end;
+    background-image: url(../img/farmaceutica.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.companias_medico {
+    display: flex;
+    align-items: end;
+    background-image: url(../img/equipomedico.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.companias_industrias {
+    display: flex;
+    align-items: end;
+    background-image: url(../img/equipomedico.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.companias_europa {
+    display: flex;
+    align-items: end;
+    background-image: url(../img/europa.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+
+.companias_farmaceutica h2 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.companias_medico h2 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.companias_industrias h2 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.companias_europa h2 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.companiaslema {
+    width: 350px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: italic;
+    color: azure;
+    text-shadow: 2px 2px 4px #000000;
+    padding-left: 100px;
+    padding-top: 100px;
+    display: none;
+}
+
+/* SEGURIDAD */
+
+.seguridad {
+    background-color: #000000;
+}
+
+.seguridad_titulo {
+    display: none;
+}
+
+.seguridadlema {
+    width: 350px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 48px;
+    font-weight: normal;
+    font-style: italic;
+    color: azure;
+    text-shadow: 2px 2px 4px #000000;
+    padding-left: 100px;
+    padding-top: 400px;
+    display: none;
+}
+
+.img_seguridad {
+    width: 100%;
+    height: 208px;
+    background-image: url(../img/seguridad.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: end;
+}
+
+.img_seguridad h1 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 250px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.seguridad_descripcion-img {
+    margin-left: 35px;
+    margin-right: 35px;
+    color: #e2e2e2;
+    padding-top: 10px;
+    padding-bottom: 50px;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+}
+
+.seguridad_principal {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-family: 'Lato', sans-serif;
+}
+
+.seguridad_principal article {
+    font-family: 'Lato', sans-serif;
+    color: #e2e2e2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: solid #FFF 1px;
+}
+
+.seguridad-titulos {
+    display: none;
+}
+
+.seguridad_entrenamiento {
+    display: flex;
+    align-items: end;
+    background-image: url(../img/entrenamiento.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.seguridad_vehiculos {
+    display: flex;
+    align-items: end;
+    background-image: url(../img/vehiculo.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.seguridad_equipo {
+    display: flex;
+    align-items: end;
+    background-image: url(../img/armamento.jpg);
+    background-size: cover;
+    height: 200px;
+}
+
+.seguridad_entrenamiento h2 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.seguridad_vehiculos h2 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.seguridad_equipo h2 {
+    background-color: #b70f0a;
+    color: aliceblue;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 200px;
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.seguridad_unete {
+    margin-left: 35px;
+    margin-right: 35px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-family: 'Lato', sans-serif;
+    color: #e2e2e2;
+    text-align: center;
+}
+
+.seguridad_unete h2 {
+    color: #c71711;
+}
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+}
+
+.video-responsive iframe,
+.video-responsive object,
+.video-responsive embed {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
