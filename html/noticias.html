@@ -14,28 +14,34 @@
 
 <body>
     <header>
-
-        <form action="">
-            <input type="search" placeholder="Buscar">
-        </form>
-
-
-
-        <section class="top-nav">
-            <div>
-                <a href="../index.html"><img src="../img/logobn.png" alt=""></a>
-            </div>
-            <input id="menu-toggle" type="checkbox" />
-            <label class='menu-button-container' for="menu-toggle">
-                <div class='menu-button'></div>
-            </label>
-            <ul class="menu">
-                <li><a href="./historia.html">NUESTRA HISTORIA</a></li>
-                <li><a href="./noticias.html">NUESTRAS NOTICIAS</a></li>
-                <li><a href="./companias.html">NUESTRAS COMPAÑÍAS</a></li>
-                <li><a href="./seguridad.html">SERVICIO DE SEGURIDAD</a></li>
-            </ul>
-        </section>
+        <div class="header_busqueda">
+            <form class="buscar" action="">
+                <input type="search" placeholder="Buscar aquí..." required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <div class="header_container">
+            <nav class="top-nav">
+                <div class="logo-blanco">
+                    <a href="../index.html"><img src="../img/logobn.png" alt=""></a>
+                </div>
+                <div class="logo-negro">
+                    <a href="../index.html"><img src="../img/logo.png" alt=""></a>
+                </div>
+                <div>
+                    <input id="menu-toggle" type="checkbox" />
+                    <label class='menu-button-container' for="menu-toggle">
+                        <div class='menu-button'></div>
+                    </label>
+                    <ul class="menu">
+                        <li><a href="./historia.html">NUESTRA HISTORIA</a></li>
+                        <li><a href="./noticias.html">NUESTRAS NOTICIAS</a></li>
+                        <li><a href="./companias.html">NUESTRAS COMPAÑÍAS</a></li>
+                        <li><a href="./seguridad.html">SERVICIO DE SEGURIDAD</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
     </header>
     <main>
         <section>
@@ -109,50 +115,54 @@
     </main>
 
     <footer>
-        <div>
-            <h3>Corporación Umbrella</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, reprehenderit maxime. Culpa odio
-                cupiditate vitae qui natus tempore asperiores voluptatem saepe tenetur! Sed sapiente eos quis ab
-                consequuntur enim dolore.</p>
+        <div class="footer_main">
+            <div class="footer_corporacion">
+                <h3>Corporación Umbrella</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos, reprehenderit maxime. Culpa odio
+                    cupiditate vitae qui natus tempore asperiores voluptatem saepe tenetur! Sed sapiente eos quis ab
+                    consequuntur enim dolore.</p>
+            </div>
+            <div class="footer_datos">
+                <div>
+                    <h4>Servicios Web</h4>
+                    <ul>
+                        <li>Suscríbete</li>
+                        <li>Renueva</li>
+                        <li>Enviar Regalo</li>
+                        <li>Servicio al Cliente</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Más Información</h4>
+                    <ul>
+                        <li>FAQ</li>
+                        <li>Boletín Informativo</li>
+                        <li>Derechos y Permisos</li>
+                        <li>Contacto</li>
+                        <li>Buscar</li>
+                    </ul>
+                </div>
+                <div>
+                    <ul class="footer_redes">
+                        <li><a href="https://www.facebook.com/umbrellacorp/" target="_blank"><img
+                                    src="../img/facebook.png" alt="Ícono de Facebook"></a></li>
+                        <li><a href="https://twitter.com/UmbrellaCorp" target="_blank"><img src="../img/tw.png"
+                                    alt="Ícono de Twitter"></a></li>
+                        <li><a href="https://www.instagram.com/umbrella_corporation_official" target="_blank"><img
+                                    src="../img/ins.png" alt="Ícono de Instagram"></a></li>
+                        <li><a href="https://www.youtube.com/@umbrellacorporation" target="_blank"><img
+                                    src="../img/yt.png" alt="Ícono de Youtube"></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div>
-            <h4>Servicios Web</h4>
-            <ul>
-                <li>Suscríbete</li>
-                <li>Renueva</li>
-                <li>Enviar Regalo</li>
-                <li>Servicio al Cliente</li>
-            </ul>
-        </div>
-        <div>
-            <h4>Más Información</h4>
-            <ul>
-                <li>FAQ</li>
-                <li>Boletín Informativo</li>
-                <li>Derechos y Permisos</li>
-                <li>Contacto</li>
-                <li>Buscar</li>
-            </ul>
-        </div>
-
         <div>
             <ul class="footer_nav">
+                <li><a href="../index.html">Inicio</a></li>
                 <li><a href="./historia.html">Nuestra Historia</a></li>
                 <li><a href="./noticias.html">Nuestras Noticias</a></li>
                 <li><a href="./companias.html">Nuestras Compañías</a></li>
                 <li><a href="./seguridad.html">Servicio de Seguridad</a></li>
-            </ul>
-        </div>
-        <div>
-            <ul class="footer_redes">
-                <li><a href="https://www.facebook.com/umbrellacorp/" target="_blank"><img src="../img/facebook.png"
-                            alt="Ícono de Facebook"></a></li>
-                <li><a href="https://twitter.com/UmbrellaCorp" target="_blank"><img src="../img/tw.png"
-                            alt="Ícono de Twitter"></a></li>
-                <li><a href="https://www.instagram.com/umbrella_corporation_official" target="_blank"><img
-                            src="../img/ins.png" alt="Ícono de Instagram"></a></li>
-                <li><a href="https://www.youtube.com/@umbrellacorporation" target="_blank"><img src="../img/yt.png"
-                            alt="Ícono de Youtube"></a></li>
             </ul>
         </div>
     </footer>

@@ -36,15 +36,8 @@ ol {
     flex-direction: column;
 }
 
-
-input[type=search] {
-    padding: 6px;
-    border: solid white 0.5px;
-    font-size: 12px;
+.header_busqueda {
     display: none;
-    background-color: #b70f0a;
-    color: white;
-    border-radius: 5px;
 }
 
 .top-nav {
@@ -124,7 +117,7 @@ input[type=search] {
     transform: rotate(-405deg);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 767px) {
     .menu-button-container {
         display: flex;
     }
@@ -194,7 +187,7 @@ input[type=search] {
     font-style: italic;
     color: azure;
     text-shadow: 2px 2px 4px #000000;
-    padding-left: 20px;
+    padding-left: 35px;
     padding-top: 20px;
 }
 
@@ -237,7 +230,7 @@ input[type=search] {
     display: flex;
     align-items: end;
     max-width: 100%;
-    height: 250px;
+    height: 30vh;
     background-image: url("../img/spencer.png");
     background-size: cover;
     background-position: 0px -20px;
@@ -307,6 +300,14 @@ footer div {
     gap: 10px;
 }
 
+.footer_main {
+    gap: 20px;
+}
+
+.footer_datos {
+    gap: 20px;
+}
+
 .footer_redes {
     display: flex;
     gap: 10px;
@@ -317,6 +318,13 @@ footer div {
     display: none;
 }
 
+@media (orientation:landscape) {
+
+    .imgnoticias {
+        height: 350px;
+        align-items: baseline;
+    }
+}
 
 
 /* NUESTRA HISTORIA */
@@ -346,17 +354,7 @@ footer div {
 }
 
 .historialema {
-    width: 362px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 48px;
-    font-weight: normal;
-    font-style: italic;
-    color: azure;
-    text-shadow: 2px 2px 4px #000000;
-    padding-left: 100px;
-    padding-top: 100px;
     display: none;
-
 }
 
 .nuestra-historia_articulo {
@@ -386,7 +384,11 @@ footer div {
     font-weight: 900;
 }
 
-
+.img_james-marcus {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
 
 /* NUESTRAS NOTICIAS */
 
@@ -527,7 +529,7 @@ footer div {
 .companias_industrias {
     display: flex;
     align-items: end;
-    background-image: url(../img/equipomedico.jpg);
+    background-image: url(../img/industrias.jpg);
     background-size: cover;
     height: 200px;
 }
@@ -636,7 +638,7 @@ footer div {
     padding: 10px 10px;
 }
 
-.seguridad_descripcion-img {
+.seguridad_descripcion {
     margin-left: 35px;
     margin-right: 35px;
     color: #e2e2e2;
@@ -644,6 +646,7 @@ footer div {
     padding-bottom: 50px;
     font-family: 'Lato', sans-serif;
     text-align: center;
+    border-bottom: solid #FFF 1px;
 }
 
 .seguridad_principal {
@@ -662,7 +665,7 @@ footer div {
     gap: 10px;
     padding-top: 50px;
     padding-bottom: 50px;
-    border-top: solid #FFF 1px;
+    border-bottom: solid #FFF 1px;
 }
 
 .seguridad-titulos {
@@ -732,6 +735,7 @@ footer div {
     font-family: 'Lato', sans-serif;
     color: #e2e2e2;
     text-align: center;
+    margin-top: 50px;
 }
 
 .seguridad_unete h2 {
@@ -756,46 +760,165 @@ footer div {
     width: 100%;
 }
 
+/* TABLETA 768 PX*/
+
+
+@media (min-width: 768px) {
+    /* HEADER */
+
+    .imgprincipal {
+        height: 250px;
+    }
+
+    .lema {
+        font-size: 28px;
+        width: 200px;
+        padding-left: 70px;
+    }
+
+    .menu>li {
+        width: 100px;
+        text-align: center;
+        color: #e2e2e2;
+        font-weight: 900;
+        font-size: 14px;
+    }
+
+    .top-nav {
+        height: 70px;
+    }
+
+    /* INDEX */
+
+    .index_noticias {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .imgnoticias {
+        height: 40vh;
+        align-items: baseline;
+    }
+
+    .img_voluntarios {
+        height: 250px;
+    }
+
+    .imgnoticias h1 {
+        font-size: 20px;
+        width: 300px;
+    }
+
+    .index_voluntarios {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    /* HISTORIA */
+
+    .nuestra-historia_articulo {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .imghistoria {
+        height: 250px;
+    }
+}
+
+@media (min-width: 768px) and (orientation:landscape) {
+
+    .index_noticias {
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    .imgnoticias {
+        height: 550px;
+    }
+
+    .index_voluntarios {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+
 
 /* ESCRITORIO 1200PX */
 
 @media (min-width: 1200px) {
 
-/* HEADER */
-
-    input[type=search] {
-        display: block;
-    }
+    /* HEADER */
 
     .header_container {
         flex-direction: column;
         justify-content: center;
         align-items: center;
         height: 172px;
-        border-bottom:#606060 solid 1px;
-        margin-bottom: 50px;
+        border-bottom: #606060 solid 1px;
     }
 
     .menu>li {
-        margin: 0 1rem;
-        overflow: hidden;
         width: 100px;
         text-align: center;
+        color: #232222;
+        font-weight: 900;
     }
 
     .header_container .top-nav {
 
-        color:#232222;
-        font-weight: 900;
         background-color: #FFF;
-        max-width: 1200px;
+        width: 62.5vw;
+        min-width: 1100px;
     }
 
     .header_busqueda {
         display: flex;
         flex-direction: row-reverse;
         background-color: #b70f0a;
-        padding: 5px;
+        padding: 7px 20px 7px 0px;
+    }
+
+    .buscar {
+        border: #e2e2e2 solid 1px;
+        background: #444;
+        background: rgba(0, 0, 0, .2);
+        color: #e2e2e2;
+    }
+
+    input {
+        background-color: transparent;
+        border: 0px;
+        float: left;
+        color: #e2e2e2;
+        padding: 3px;
+        width: 150px;
+    }
+
+    input:focus {
+        outline: transparent;
+    }
+
+    button {
+        color: #e2e2e2;
+        position: relative;
+        float: right;
+        background-color: transparent;
+        border-top: transparent;
+        border-right: transparent;
+        border-bottom: transparent;
+        padding: 3px;
+        width: 70px;
+    }
+
+    button:hover {
+        background-color: #e2e2e2;
+        color: #b70f0a;
+    }
+
+    button:active {
+        box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);
     }
 
     .logo-blanco {
@@ -820,14 +943,15 @@ footer div {
     }
 
     .imgprincipal {
-        height: 500px;
-        max-width: 1200px;
+        height: 384px;
+        width: 100%;
     }
 
     .lema {
         font-size: 48px;
         width: 450px;
-        padding: 50px;
+        padding-top: 50px;
+        padding-left: 10vw;
     }
 
     .index_noticias {
@@ -883,12 +1007,13 @@ footer div {
 
     .index_noticias-escritorio {
         display: flex;
-        max-width: 1200px;
+        width: 62.5vw;
+        min-width: 1100px;
         gap: 50px;
         padding-top: 50px;
         padding-bottom: 50px;
-        border-top:#606060 solid 1px;
-        border-bottom:#606060 solid 1px;
+        border-top: #606060 solid 1px;
+        border-bottom: #606060 solid 1px;
     }
 
     .contenedor-principal {
@@ -907,11 +1032,73 @@ footer div {
     }
 
     .img_voluntarios {
-        height: 450px;
+        height: 384px;
         max-width: 1200px;
     }
 
-/* FOOTER */
+    /* HISTORIA */
+
+    .nuestra-historia_contendedor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nuestra-historia_titulo {
+        display: block;
+        width: 62.5vw;
+        min-width: 1100px;
+    }
+
+    .nuestra-historia_titulo h1 {
+        width: 62.5vw;
+        min-width: 1100px;
+        font-family: 'Lato', sans-serif;
+        font-size: 48px;
+        color: #b70f0a;
+        border-bottom: #606060 solid 1px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .imghistoria {
+        margin-top: 40px;
+        width: 62.5vw;
+        min-width: 1100px;
+        height: 500px;
+        align-items: baseline;
+        padding-left: auto;
+        padding-right: auto;
+    }
+
+    .imghistoria h1 {
+        display: none;
+    }
+
+    .historialema {
+        display: block;
+        width: 362px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: 48px;
+        font-weight: normal;
+        font-style: italic;
+        color: azure;
+        text-shadow: 2px 2px 4px #000000;
+        padding-left: 70px;
+        padding-top: 50px;
+    }
+
+    .nuestra-historia_articulo {
+        max-width: 1000px;
+        margin-bottom: 50px;
+        gap: 20px;
+    }
+
+    .nuestra-historia_articulo h2 {
+        font-size: 30px;
+    }
+
+    /* FOOTER */
 
     .footer_main {
         display: flex;
@@ -923,8 +1110,6 @@ footer div {
         border-bottom: white solid 1px;
     }
 
-
-
     .footer_corporacion {
         max-width: 500px;
     }
@@ -935,14 +1120,14 @@ footer div {
         gap: 40px;
     }
 
-    .footer_redes{
+    .footer_redes {
         flex-direction: column;
     }
 
     .footer_nav {
         display: flex;
         justify-content: center;
-        gap: 100px;
+        gap: 80px;
     }
 
     .footer_nav li {
