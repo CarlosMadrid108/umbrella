@@ -1,0 +1,82 @@
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: $c-rojo;
+    color: $c-blanco;
+    padding: 20px;
+    font-family: $ff-principal;
+    gap: 20px;
+
+    div {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+
+.footer-main {
+    gap: 20px;
+
+    &_datos {
+        gap: 20px;
+    }
+
+    &_redes {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+    }
+
+    &_nav {
+        display: none;
+    }
+}
+
+//TABLET
+
+@media (min-width: 768px) {
+    .footer-main_corporacion {
+        max-width: 600px
+    }
+}
+
+// ESCRITORIO
+
+@media (min-width: 1200px) {
+    
+    .footer-main {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-left: 100px;
+        margin-right: 100px;
+        padding-bottom: 15px;
+        border-bottom: solid $c-blanco 1px;
+
+        &_corporacion {
+            max-width: 500px;
+        }
+
+        &_datos {
+            display: flex;
+            flex-direction: row;
+            gap: 40px;
+        }
+
+        &_redes {
+            flex-direction: column;
+        }
+
+        &_nav {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+
+            li {
+                font-weight: 900;
+            }
+        }
+        }
+    }

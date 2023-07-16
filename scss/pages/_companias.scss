@@ -1,0 +1,169 @@
+
+.companias {
+    display: flex;
+    flex-direction: column;
+    margin-left: 35px;
+    margin-right: 35px;
+    font-family: $ff-principal;
+
+    article {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        border-top: solid $c-gris 1px;
+    }
+
+    p {
+        color: $c-gris;
+    }
+
+    &_img {
+
+        background-image: url(../img/edificio.jpg);
+        width: 100%;
+        height: 208px;
+        background-size: cover;
+        display: flex;
+        align-items: end;
+    
+        h1 {
+            background-color: $c-rojo;
+            color: $c-blanco;
+            font-size: 16px;
+            font-family: $ff-titulos_movil;
+            width: 250px;
+            text-align: center;
+            padding: 10px 10px;
+        }
+    
+        h3 {
+            width: 350px;
+            font-family: $ff-lema;
+            font-size: 48px;
+            font-weight: normal;
+            font-style: italic;
+            color: $c-blanco;
+            text-shadow: 2px 2px 4px $c-negrob;
+            padding-left: 100px;
+            padding-top: 100px;
+            display: none;
+        }
+    }
+
+    &_titulo {
+        display: none;       
+    }
+
+    &_escritorio {
+        display: none;
+    }
+
+    &_movil {
+        background-color: $c-rojo;
+        color: $c-blanco;
+        font-size: 14px;
+        font-family: $ff-titulos_movil;
+        width: 250px;
+        text-align: center;
+        padding: 10px 10px;
+    }
+
+    &_articulo {
+        display: flex;
+        flex-direction: column;
+        margin-right: 35px;
+        margin-left: 35px;
+        gap: 10px;
+        font-family: $ff-principal;
+        padding-top: 20px;
+        padding-bottom: 50px;
+
+        h2 {
+            color: $c-negro;
+        }
+
+        p {
+            color: $c-gris;
+        }
+    }
+
+    &_farmaceutica {
+        display: flex;
+        align-items: end;
+        background-image: url(../img/farmaceutica.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
+
+    &_medico {
+        display: flex;
+        align-items: end;
+        background-image: url(../img/equipomedico.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
+
+    &_industrias {
+        display: flex;
+        align-items: end;
+        background-image: url(../img/industrias.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
+
+    &_europa {
+        display: flex;
+        align-items: end;
+        background-image: url(../img/europa.jpg);
+        background-size: cover;
+        background-position: center;
+        height: 200px;
+    }
+}
+
+@media (min-width: 768px) {
+    .companias {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 20px;
+
+        article {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        &_img {
+            height: 250px;
+        }
+
+        &_escritorio {
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            border-top: solid $c-gris 1px;
+            color: $c-rojo;
+        }
+
+        &_movil {
+                color:transparent;
+                background-color:transparent;
+            
+        }
+
+        &_articulo {
+            margin-left: 100px;
+            margin-right: 100px;
+            padding-bottom: 30px;
+            padding-top: 30px;
+        }
+
+    }
+}

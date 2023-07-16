@@ -1,0 +1,142 @@
+.seguridad {
+    background-color: #000000;
+
+    &_titulo-principal {
+        display: none;
+    }
+    
+
+    &_titulos {
+        display: none;
+    }
+
+    &_titulos-moviles {
+        background-color: $c-rojo;
+        color: $c-blanco;
+        font-size: 14px;
+        font-family: Arial, Helvetica, sans-serif;
+        width: 200px;
+        text-align: center;
+        padding: 10px 10px;
+    }
+
+    &_img {
+        width: 100%;
+        height: 208px;
+        background-image: url(../img/seguridad.jpg);
+        background-size: cover;
+        display: flex;
+        align-items: end;
+    
+        h3 {
+            width: 350px;
+            font-family: $ff-lema;
+            font-size: 48px;
+            font-weight: normal;
+            font-style: italic;
+            color: $c-blanco;
+            text-shadow: 2px 2px 4px $c-negrob;
+            padding-left: 100px;
+            padding-top: 400px;
+            display: none;
+        }
+    
+        h1 {
+            background-color: $c-rojo;
+            color: $c-blanco;
+            font-size: 16px;
+            font-family: Arial, Helvetica, sans-serif;
+            width: 250px;
+            text-align: center;
+            padding: 10px 10px;
+        }
+    }
+
+    &_descripcion {
+        margin-left: 35px;
+        margin-right: 35px;
+        color: $c-bgris;
+        padding-top: 10px;
+        padding-bottom: 50px;
+        font-family: $ff-principal;
+        text-align: center;
+        border-bottom: solid $c-bgris 1px;
+    }
+
+    &_principal {
+        display: flex;
+        flex-direction: column;
+        margin-left: 35px;
+        margin-right: 35px;
+        font-family: $ff-principal;
+
+        article {
+            font-family: $ff-principal;
+            color: $c-bgris;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border-bottom: solid $c-bgris 1px;
+        }
+    }
+
+    &_entrenamiento {
+        display: flex;
+        align-items: end;
+        background-image: url(../img/entrenamiento.jpg);
+        background-size: cover;
+        height: 200px;
+    }
+
+    &_vehiculos {
+        display: flex;
+        align-items: end;
+        background-image: url(../img/vehiculo.jpg);
+        background-size: cover;
+        height: 200px;
+    }
+
+    &_equipo {
+        display: flex;
+        align-items: end;
+        background-image: url(../img/armamento.jpg);
+        background-size: cover;
+        height: 200px;
+    }
+
+    &_unete {
+        margin-left: 35px;
+        margin-right: 35px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-family: $ff-principal;
+        color: $c-bgris;
+        text-align: center;
+        margin-top: 50px;
+
+        h2 {
+            color: $c-brojo;
+        }
+    }
+}
+
+.video-responsive {
+    height: 0;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    position: relative;
+
+    iframe,
+    object,
+    embed {
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+}

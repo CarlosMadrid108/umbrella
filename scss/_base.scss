@@ -1,0 +1,27 @@
+$c-blanco:white;
+$c-bgris:#e2e2e2;
+$c-rojo:#b70f0a;
+$c-brojo:#c71711;
+$c-negro:#232222;
+$c-negrob:rgb(31, 25, 25);
+$c-gris:#606060;
+$ff-principal:'Lato', sans-serif;
+$ff-lema:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+$ff-titulos_movil:Arial, Helvetica, sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul,
+ol {
+    text-decoration: none;
+    list-style: none;
+}

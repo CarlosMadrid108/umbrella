@@ -1,0 +1,118 @@
+
+.nuestras-noticias {
+    display: none;
+
+    &_img {
+        display: flex;
+        align-items: end;
+        max-width: 100%;
+        height: 30vh;
+        background-image: url("../img/spencer.png");
+        background-size: cover;
+        background-position: 0px -20px;
+    
+        h1 {
+            background-color: $c-rojo;
+            font-family: $ff-titulos_movil;
+            width: 250px;
+            text-align: center;
+            padding: 10px 10px;
+            color: $c-blanco;
+        
+        }
+    }
+
+    &_secundaria {
+        display: none;
+    }
+
+    &_principal {
+        display: flex;
+        flex-direction: column;
+        margin-left: 35px;
+        margin-right: 35px;
+        font-family: 'Lato', sans-serif;
+
+        img {
+            width: 100%;
+        }
+
+        article {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 24px;
+            color: $c-negro;
+        }
+
+        p {
+            color: $c-gris;
+        }
+
+        span {
+            color: $c-gris;
+            font-weight: 900;
+        }
+    }
+
+    &_bordes {
+        padding-top: 50px;
+        border-top: solid $c-gris 1px;
+    }
+}
+
+// TABLET
+
+@media (min-width: 768px) {
+
+    .nuestras-noticias {
+
+        &_img {   
+            height: 40vh;
+        
+            h1 {
+                background-color: $c-rojo;
+                font-family: $ff-titulos_movil;
+                width: 250px;
+                text-align: center;
+                padding: 10px 10px;
+                color: $c-blanco;
+            
+            }
+        }
+
+        &_principal {
+        margin-left: 100px;
+        margin-right: 100px;
+        margin-bottom: 20px;
+
+            .nuestras-noticias_bordes {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 70px 100px 20px;
+
+            img {
+                grid-row: span 3;
+            }
+
+            h2 {
+                font-size: 20px;
+                color: $c-negro;
+            }
+    
+            p {
+                color: $c-gris;
+            }
+    
+            span {
+                color: $c-gris;
+                font-weight: 900;
+            }
+        }
+        }
+    }
+}

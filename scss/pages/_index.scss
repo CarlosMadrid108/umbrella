@@ -1,0 +1,300 @@
+.img_principal {
+    width: 100%;
+    height: 208px;
+    background-image: url(../img/ciencia.png);
+    background-size: cover;
+    background-position: right;
+    margin-bottom: 50px;
+
+    h3 {
+        width: 120px;
+    font-family: $ff-lema;
+    font-size: 24px;
+    font-weight: normal;
+    font-style: italic;
+    color: $c-blanco;
+    text-shadow: 2px 2px 4px $c-negrob;
+    padding-left: 35px;
+    padding-top: 20px;
+    }
+}
+
+
+
+.index_noticias {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid $c-gris;
+    border-bottom: 1px solid $c-gris;
+    margin-left: 35px;
+    margin-right: 35px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 10px;
+
+    h2 {
+        font-family: $ff-principal;
+        color: $c-negro;
+        font-size: 24px;
+    }
+
+    p {
+        font-family: $ff-principal;
+        color: $c-gris;
+    }
+
+    span {
+        font-family: $ff-principal;
+        font-weight: 900;
+        color: $c-gris;
+    }
+
+        &-img {
+            display: flex;
+            align-items: end;
+            max-width: 100%;
+            height: 30vh;
+            background-image: url("../img/spencer.png");
+            background-size: cover;
+            background-position: 0px -20px;
+    
+            h1 {
+                background-color: $c-rojo;
+                color: $c-blanco;
+                font-size: 16px;
+                font-family: $ff-titulos_movil;
+                width: 250px;
+                text-align: center;
+                padding: 10px 10px;
+    
+            }
+        }
+
+}
+
+
+
+.index_subnoticias {
+    display: none
+}
+
+
+.index_voluntarios {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 35px;
+    margin-right: 35px;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    h2 {
+        font-family: $ff-principal;
+        text-align: center;
+        color: $c-rojo;
+    }
+
+    p {
+        font-family: $ff-principal;
+        text-align: center;
+        color: $c-gris;
+    }
+
+    span {
+        font-family: $ff-principal;
+        text-align: center;
+        font-size: 12px;
+        color: $c-gris;
+    }
+}
+
+.img_voluntarios {
+    width: 100%;
+    height: 200px;
+    background-image: url(../img/voluntarios.png);
+    background-size: cover;
+}
+
+@media (orientation:landscape) {
+
+    .index_noticias {
+        &-img {
+            height: 350px;
+            align-items: end;
+        }
+    }
+}
+
+// TABLET
+
+@media (min-width: 768px) {
+
+    .img_principal {
+        height: 250px;
+
+        h3 {
+            font-size: 28px;
+            width: 200px;
+            padding-left: 70px;
+        }
+    }
+
+
+
+    .index_noticias {
+        margin-left: 70px;
+        margin-right: 70px;
+
+        &-img {
+            height: 40vh;
+            align-items: baseline;
+    
+            h1 {
+                font-size: 20px;
+                width: 300px;
+            }
+        }
+    }
+
+    .img_voluntarios {
+        height: 250px;
+    }
+
+
+    .index_voluntarios {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+}
+
+@media (min-width: 768px) and (orientation:landscape) {
+
+    .index_noticias {
+        margin-right: 100px;
+        margin-left: 100px;
+
+        &-img {
+            height: 550px;
+        }
+    }
+
+
+    .index_voluntarios {
+        margin-left: 100px;
+        margin-right: 100px;
+    }
+}
+
+// ESCRITORIO
+
+@media (min-width: 1200px) {
+
+
+    .img_principal {
+        height: 384px;
+        width: 100%;
+
+        h3 {
+            font-size: 48px;
+            width: 450px;
+            padding-top: 50px;
+            padding-left: 10vw;
+        }
+
+        &-contenedor {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        
+        
+    }
+
+
+    .index_noticias {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        border-top: none 0px;
+        border-bottom: none 0px;
+        max-width: 750px;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        &-escritorio {
+            display: flex;
+            width: 62.5vw;
+            min-width: 1100px;
+            max-width: 1200px;
+            gap: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            border-top: $c-gris solid 1px;
+            border-bottom: $c-gris solid 1px;
+        }
+
+        &-img {
+            height: 500px;
+            align-items: baseline;
+    
+            h1 {
+                font-size: 24px;
+                width: 350px;
+            }
+        }
+    }
+
+
+
+    .index_subnoticias {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        h3 {
+            font-family: $ff-principal;
+            font-size: 30px;
+            padding-bottom: 25px;
+            color: $c-negro;
+        }
+
+        span {
+            font-family: $ff-principal;
+            font-weight: 900;
+            color: $c-gris;
+        }
+    }
+
+
+    .segunda-subnoticia {
+        padding-top: 55px;
+        padding-bottom: 55px;
+        border-top: $c-gris solid 1px;
+        border-bottom: $c-gris solid 1px;
+    }
+
+
+    .contenedor-principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .index_voluntarios h2 {
+        font-size: 40px;
+    }
+
+    .index_voluntarios p {
+        max-width: 800px;
+    }
+
+    .img_voluntarios {
+        height: 384px;
+        max-width: 1200px;
+    }
+}
