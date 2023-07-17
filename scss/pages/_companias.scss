@@ -60,6 +60,10 @@
         display: none;
     }
 
+    &_escritorio-top {
+        display: none;
+    }
+
     &_movil {
         background-color: $c-rojo;
         color: $c-blanco;
@@ -128,8 +132,8 @@
 
 @media (min-width: 768px) {
     .companias {
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 50px;
+        margin-right: 50px;
         margin-bottom: 20px;
 
         article {
@@ -152,6 +156,13 @@
             color: $c-rojo;
         }
 
+        &_escritorio-top {
+            display: block;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            color: $c-rojo;
+        }
+
         &_movil {
                 color:transparent;
                 background-color:transparent;
@@ -159,10 +170,11 @@
         }
 
         &_articulo {
-            margin-left: 100px;
-            margin-right: 100px;
+            margin-left: 50px;
+            margin-right: 50px;
             padding-bottom: 30px;
             padding-top: 30px;
+            border-bottom: solid $c-gris 1px;
         }
 
     }

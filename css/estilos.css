@@ -414,8 +414,8 @@ footer div {
     padding-left: 70px;
   }
   .index_noticias {
-    margin-left: 70px;
-    margin-right: 70px;
+    margin-left: 50px;
+    margin-right: 50px;
   }
   .index_noticias-img {
     height: 40vh;
@@ -589,8 +589,8 @@ footer div {
 
 @media (min-width: 768px) {
   .nuestra-historia_articulo {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 10px;
   }
   .img_historia {
@@ -679,6 +679,16 @@ footer div {
   padding: 10px 10px;
   color: white;
 }
+.nuestras-noticias_texto {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nuestras-noticias_texto-principal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 .nuestras-noticias_secundaria {
   display: none;
 }
@@ -692,12 +702,6 @@ footer div {
 .nuestras-noticias_principal img {
   width: 100%;
 }
-.nuestras-noticias_principal article {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  padding-bottom: 50px;
-}
 .nuestras-noticias_principal h2 {
   font-size: 24px;
   color: #232222;
@@ -709,9 +713,34 @@ footer div {
   color: #606060;
   font-weight: 900;
 }
+.nuestras-noticias_grande {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 50px;
+}
 .nuestras-noticias_bordes {
   padding-top: 50px;
   border-top: solid #606060 1px;
+  padding-bottom: 50px;
+}
+.nuestras-noticias_primera {
+  background-image: url(/img/adnnoticia.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 25vh;
+}
+.nuestras-noticias_segunda {
+  background-image: url(/img/evolucionnoticia.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 25vh;
+}
+.nuestras-noticias_tercera {
+  background-image: url(/img/insectosnoticia.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 25vh;
 }
 
 @media (min-width: 768px) {
@@ -727,28 +756,32 @@ footer div {
     color: white;
   }
   .nuestras-noticias_principal {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 20px;
   }
-  .nuestras-noticias_principal .nuestras-noticias_bordes {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 70px 100px 20px;
+  .nuestras-noticias_bordes {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
   }
-  .nuestras-noticias_principal .nuestras-noticias_bordes img {
-    grid-row: span 3;
+  .nuestras-noticias_primera {
+    width: 40%;
+    height: 200px;
+    background-position: center;
   }
-  .nuestras-noticias_principal .nuestras-noticias_bordes h2 {
-    font-size: 20px;
-    color: #232222;
+  .nuestras-noticias_segunda {
+    width: 40%;
+    height: 200px;
+    background-position: center;
   }
-  .nuestras-noticias_principal .nuestras-noticias_bordes p {
-    color: #606060;
+  .nuestras-noticias_tercera {
+    width: 40%;
+    height: 200px;
+    background-position: center;
   }
-  .nuestras-noticias_principal .nuestras-noticias_bordes span {
-    color: #606060;
-    font-weight: 900;
+  .nuestras-noticias_texto {
+    width: 60%;
   }
 }
 .companias {
@@ -802,6 +835,9 @@ footer div {
   display: none;
 }
 .companias_escritorio {
+  display: none;
+}
+.companias_escritorio-top {
   display: none;
 }
 .companias_movil {
@@ -864,8 +900,8 @@ footer div {
 
 @media (min-width: 768px) {
   .companias {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 20px;
   }
   .companias article {
@@ -885,15 +921,22 @@ footer div {
     border-top: solid #606060 1px;
     color: #b70f0a;
   }
+  .companias_escritorio-top {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #b70f0a;
+  }
   .companias_movil {
     color: transparent;
     background-color: transparent;
   }
   .companias_articulo {
-    margin-left: 100px;
-    margin-right: 100px;
+    margin-left: 50px;
+    margin-right: 50px;
     padding-bottom: 30px;
     padding-top: 30px;
+    border-bottom: solid #606060 1px;
   }
 }
 .seguridad {
@@ -950,7 +993,6 @@ footer div {
   padding-top: 10px;
   padding-bottom: 50px;
   font-family: "Lato", sans-serif;
-  text-align: center;
   border-bottom: solid #e2e2e2 1px;
 }
 .seguridad_principal {
@@ -1021,6 +1063,50 @@ footer div {
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+@media (min-width: 768px) {
+  .seguridad_principal {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .seguridad_img {
+    height: 250px;
+  }
+  .seguridad_descripcion {
+    padding-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  .seguridad_titulos {
+    display: block;
+  }
+  .seguridad_titulos-moviles {
+    display: none;
+  }
+  .seguridad_texto {
+    width: 60%;
+  }
+  .seguridad_entrenamiento {
+    width: 40%;
+  }
+  .seguridad_vehiculos {
+    width: 40%;
+  }
+  .seguridad_equipo {
+    width: 40%;
+  }
+  .seguridad article {
+    flex-direction: row;
+    gap: 20px;
+  }
+  .seguridad article h2 {
+    color: #c71711;
+    padding-bottom: 10px;
+  }
+  .video-responsive {
+    margin-top: 20px;
+  }
 }
 
 /*# sourceMappingURL=estilos.css.map */

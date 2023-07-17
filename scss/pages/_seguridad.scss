@@ -59,7 +59,6 @@
         padding-top: 10px;
         padding-bottom: 50px;
         font-family: $ff-principal;
-        text-align: center;
         border-bottom: solid $c-bgris 1px;
     }
 
@@ -138,5 +137,63 @@
         position: absolute;
         top: 0;
         width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .seguridad {
+
+        &_principal {
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+        
+        &_img {
+            height: 250px;
+        }
+
+        &_descripcion {
+            padding-top: 20px;
+            margin-left: 50px;
+            margin-right: 50px;
+        }
+
+        &_titulos {
+            display: block;
+        }
+
+        &_titulos-moviles {
+            display: none;
+        }
+
+        &_texto {
+            width: 60%;
+        }
+
+        &_entrenamiento {
+            width: 40%;
+        }
+
+        &_vehiculos {
+            width: 40%;
+        }
+
+        &_equipo {
+            width: 40%;
+        }
+
+        article {
+            flex-direction: row;
+            gap: 20px;
+
+            h2 {
+                color:$c-brojo;
+                padding-bottom: 10px;
+            }
+        }
+    }
+
+    .video-responsive {
+        margin-top: 20px;
     }
 }

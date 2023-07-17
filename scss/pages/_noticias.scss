@@ -1,4 +1,3 @@
-
 .nuestras-noticias {
     display: none;
 
@@ -10,7 +9,7 @@
         background-image: url("../img/spencer.png");
         background-size: cover;
         background-position: 0px -20px;
-    
+
         h1 {
             background-color: $c-rojo;
             font-family: $ff-titulos_movil;
@@ -18,8 +17,20 @@
             text-align: center;
             padding: 10px 10px;
             color: $c-blanco;
-        
+
         }
+    }
+
+    &_texto {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    &_texto-principal {
+        display: flex;
+        flex-direction: column;
+        gap: 10px
     }
 
     &_secundaria {
@@ -37,12 +48,6 @@
             width: 100%;
         }
 
-        article {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            padding-bottom: 50px;
-        }
 
         h2 {
             font-size: 24px;
@@ -59,9 +64,38 @@
         }
     }
 
+    &_grande {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-bottom: 50px;
+    }
+
     &_bordes {
         padding-top: 50px;
         border-top: solid $c-gris 1px;
+        padding-bottom: 50px;
+    }
+
+    &_primera {
+        background-image: url(/img/adnnoticia.jpg);
+        background-size: cover;
+        max-width: 100%;
+        height: 25vh;
+    }
+
+    &_segunda {
+        background-image: url(/img/evolucionnoticia.jpg);
+        background-size: cover;
+        max-width: 100%;
+        height: 25vh;
+    }
+
+    &_tercera {
+        background-image: url(/img/insectosnoticia.jpg);
+        background-size: cover;
+        max-width: 100%;
+        height: 25vh;
     }
 }
 
@@ -71,9 +105,9 @@
 
     .nuestras-noticias {
 
-        &_img {   
+        &_img {
             height: 40vh;
-        
+
             h1 {
                 background-color: $c-rojo;
                 font-family: $ff-titulos_movil;
@@ -81,38 +115,45 @@
                 text-align: center;
                 padding: 10px 10px;
                 color: $c-blanco;
-            
+
             }
         }
+
 
         &_principal {
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-bottom: 20px;
-
-            .nuestras-noticias_bordes {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 70px 100px 20px;
-
-            img {
-                grid-row: span 3;
-            }
-
-            h2 {
-                font-size: 20px;
-                color: $c-negro;
-            }
-    
-            p {
-                color: $c-gris;
-            }
-    
-            span {
-                color: $c-gris;
-                font-weight: 900;
-            }
+            margin-left: 50px;
+            margin-right: 50px;
+            margin-bottom: 20px;
         }
+
+        &_bordes {
+            display: flex;
+            flex-direction: row;
+            gap: 15px;
         }
+
+        &_primera {
+            width: 40%;
+            height: 200px;
+            background-position: center;
+        }
+
+        &_segunda {
+            width: 40%;
+            height: 200px;
+            background-position: center;
+        }
+
+        &_tercera {
+            width: 40%;
+            height: 200px;
+            background-position: center;
+        }
+
+        &_texto {
+            width: 60%;
+        }
+
     }
+
 }
