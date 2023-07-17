@@ -157,3 +157,113 @@
     }
 
 }
+
+//ESCRITORIO 
+
+
+
+@media (min-width: 1200px) {
+
+    .nuestras-noticias {
+        display: block;
+        width: 62.5vw;
+        min-width: 1100px;
+        max-width: 1200px;
+
+        h1 {
+            width: 62.5vw;
+            min-width: 1100px;
+            max-width: 1200px;
+            font-family: $ff-principal;
+            font-size: 48px;
+            color: $c-rojo;
+            border-bottom: $c-gris solid 1px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin-bottom: 40px;
+        }
+
+        &_contenedor {
+            min-width: 1100px;
+            max-width: 1200px;
+            display: flex;
+            gap: 50px;
+            padding-left: auto;
+            padding-right: auto;
+            width: 62.5vw;
+        }
+
+        &_main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &_principal {
+            margin-left: 0px;
+            margin-right: 0px;
+            margin-bottom: 0px;
+            width: 70%;
+        }
+
+        &_secundaria {
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+
+            img {
+                margin-top: 30px;
+                margin-bottom: 30px;
+            }
+
+            h2 {
+                font-family: $ff-principal;
+                color: $c-rojo;
+                border-bottom: solid 1px $c-gris;
+                padding-bottom: 10px;
+
+                font-size: 30px;
+
+            }
+
+            article {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding-bottom: 30px;
+                border-bottom: solid 1px $c-gris;
+                margin-bottom: 30px;
+
+                h3 {
+                    font-family: $ff-principal;
+                }
+
+                span {
+                    font-family: $ff-principal;
+                    color: $c-gris;
+                    font-weight: 900;
+                }
+            }
+        }
+
+        &_img {
+            h1 {
+                display: none;
+            }
+
+            width: 40%;
+            height: 200px;
+            background-position: center;
+
+        }
+
+        &_grande {
+            display: flex;
+            flex-direction: row;
+        }
+
+        &_texto-principal {
+            width: 60%;
+        }
+    }
+}

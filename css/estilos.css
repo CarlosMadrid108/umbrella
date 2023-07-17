@@ -23,7 +23,16 @@ ol {
   width: 140px;
 }
 
+.logo-umbrella_seguridad img {
+  width: 140px;
+}
+
 .header_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.header_container_negro {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -44,8 +53,27 @@ ol {
   height: 50px;
   padding: 1em;
 }
+.top-nav_negro {
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #b70f0a;
+  color: white;
+  height: 50px;
+  padding: 1em;
+}
 
 .menu {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Lato", sans-serif;
+}
+.menu_negro {
   display: flex;
   flex-direction: row;
   list-style-type: none;
@@ -59,7 +87,21 @@ ol {
   overflow: hidden;
 }
 
+.menu_negro > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
 .menu-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.menu-button-container_negro {
   display: none;
   height: 100%;
   width: 30px;
@@ -70,6 +112,9 @@ ol {
 }
 
 #menu-toggle {
+  display: none;
+}
+#menu-toggle_negro {
   display: none;
 }
 
@@ -85,7 +130,24 @@ ol {
   border-radius: 2px;
 }
 
+.menu-button_negro,
+.menu-button_negro::before,
+.menu-button_negro::after {
+  display: block;
+  background-color: white;
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
 .menu-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.menu-button_negro::before {
   content: "";
   margin-top: -8px;
 }
@@ -95,7 +157,17 @@ ol {
   margin-top: 8px;
 }
 
+.menu-button_negro::after {
+  content: "";
+  margin-top: 8px;
+}
+
 #menu-toggle:checked + .menu-button-container .menu-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle_negro:checked + .menu-button-container_negro .menu-button_negro::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
@@ -104,7 +176,16 @@ ol {
   background: rgba(255, 255, 255, 0);
 }
 
+#menu-toggle_negro:checked + .menu-button-container_negro .menu-button_negro {
+  background: rgba(255, 255, 255, 0);
+}
+
 #menu-toggle:checked + .menu-button-container .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+#menu-toggle_negro:checked + .menu-button-container_negro .menu-button_negro::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
@@ -113,7 +194,20 @@ ol {
   .menu-button-container {
     display: flex;
   }
+  .menu-button-container_negro {
+    display: flex;
+  }
   .menu {
+    position: absolute;
+    top: 0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  .menu_negro {
     position: absolute;
     top: 0;
     margin-top: 50px;
@@ -130,7 +224,20 @@ ol {
     border: 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
+  #menu-toggle_negro ~ .menu_negro li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
   #menu-toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle_negro:checked ~ .menu_negro li {
     border: 1px solid #333;
     height: 2.5em;
     padding: 0.5em;
@@ -145,7 +252,19 @@ ol {
     color: white;
     background-color: #222;
   }
+  .menu_negro > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
   .menu > li:not(:last-child) {
+    border-bottom: 1px solid #444;
+  }
+  .menu_negro > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
 }
@@ -157,7 +276,17 @@ ol {
     font-weight: 900;
     font-size: 14px;
   }
+  .menu_negro > li {
+    width: 100px;
+    text-align: center;
+    color: white;
+    font-weight: 900;
+    font-size: 14px;
+  }
   .top-nav {
+    height: 70px;
+  }
+  .top-nav_negro {
     height: 70px;
   }
 }
@@ -169,14 +298,33 @@ ol {
     height: 172px;
     border-bottom: #606060 solid 1px;
   }
+  .header_container_negro {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 172px;
+    border-bottom: #606060 solid 1px;
+    background-color: black;
+  }
   .menu > li {
     width: 100px;
     text-align: center;
     color: #232222;
     font-weight: 900;
   }
-  .header_container .top-nav {
+  .menu_negro > li {
+    width: 100px;
+    text-align: center;
+    color: #e2e2e2;
+    font-weight: 900;
+  }
+  .top-nav {
     background-color: white;
+    width: 62.5vw;
+    min-width: 1100px;
+  }
+  .top-nav_negro {
+    background-color: black;
     width: 62.5vw;
     min-width: 1100px;
   }
@@ -228,6 +376,9 @@ ol {
     display: flex;
   }
   .logo-negro img {
+    width: 300px;
+  }
+  .logo-umbrella_seguridad img {
     width: 300px;
   }
 }
@@ -784,6 +935,93 @@ footer div {
     width: 60%;
   }
 }
+@media (min-width: 1200px) {
+  .nuestras-noticias {
+    display: block;
+    width: 62.5vw;
+    min-width: 1100px;
+    max-width: 1200px;
+  }
+  .nuestras-noticias h1 {
+    width: 62.5vw;
+    min-width: 1100px;
+    max-width: 1200px;
+    font-family: "Lato", sans-serif;
+    font-size: 48px;
+    color: #b70f0a;
+    border-bottom: #606060 solid 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+  }
+  .nuestras-noticias_contenedor {
+    min-width: 1100px;
+    max-width: 1200px;
+    display: flex;
+    gap: 50px;
+    padding-left: auto;
+    padding-right: auto;
+    width: 62.5vw;
+  }
+  .nuestras-noticias_main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nuestras-noticias_principal {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    width: 70%;
+  }
+  .nuestras-noticias_secundaria {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+  }
+  .nuestras-noticias_secundaria img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .nuestras-noticias_secundaria h2 {
+    font-family: "Lato", sans-serif;
+    color: #b70f0a;
+    border-bottom: solid 1px #606060;
+    padding-bottom: 10px;
+    font-size: 30px;
+  }
+  .nuestras-noticias_secundaria article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 30px;
+    border-bottom: solid 1px #606060;
+    margin-bottom: 30px;
+  }
+  .nuestras-noticias_secundaria article h3 {
+    font-family: "Lato", sans-serif;
+  }
+  .nuestras-noticias_secundaria article span {
+    font-family: "Lato", sans-serif;
+    color: #606060;
+    font-weight: 900;
+  }
+  .nuestras-noticias_img {
+    width: 40%;
+    height: 200px;
+    background-position: center;
+  }
+  .nuestras-noticias_img h1 {
+    display: none;
+  }
+  .nuestras-noticias_grande {
+    display: flex;
+    flex-direction: row;
+  }
+  .nuestras-noticias_texto-principal {
+    width: 60%;
+  }
+}
 .companias {
   display: flex;
   flex-direction: column;
@@ -911,6 +1149,9 @@ footer div {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .companias article p {
+    width: 70%;
+  }
   .companias_img {
     height: 250px;
   }
@@ -935,8 +1176,92 @@ footer div {
     margin-left: 50px;
     margin-right: 50px;
     padding-bottom: 30px;
-    padding-top: 30px;
     border-bottom: solid #606060 1px;
+  }
+  .companias_farmaceutica {
+    width: 30%;
+  }
+  .companias_medico {
+    width: 30%;
+  }
+  .companias_industrias {
+    width: 30%;
+  }
+  .companias_europa {
+    width: 30%;
+  }
+}
+@media (min-width: 1200px) {
+  .companias {
+    min-width: 1100px;
+    max-width: 1200px;
+    display: flex;
+    padding-left: auto;
+    padding-right: auto;
+    width: 62.5vw;
+  }
+  .companias_contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .companias_img {
+    width: 62.5vw;
+    min-width: 1100px;
+    max-width: 1200px;
+    height: 500px;
+    align-items: baseline;
+    padding-left: auto;
+    padding-right: auto;
+  }
+  .companias_img h1 {
+    display: none;
+  }
+  .companias_img h3 {
+    display: block;
+  }
+  .companias_top {
+    min-width: 1100px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding-left: auto;
+    padding-right: auto;
+    width: 62.5vw;
+  }
+  .companias_titulo {
+    display: block;
+    width: 62.5vw;
+    min-width: 1100px;
+    max-width: 1200px;
+  }
+  .companias_titulo h1 {
+    width: 62.5vw;
+    min-width: 1100px;
+    max-width: 1200px;
+    font-family: "Lato", sans-serif;
+    font-size: 48px;
+    color: #b70f0a;
+    border-bottom: #606060 solid 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+  }
+  .companias_articulo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .companias_articulo h3 {
+    font-size: 24px;
+  }
+  .companias_escritorio-top {
+    font-size: 30px;
+  }
+  .companias_escritorio {
+    font-size: 30px;
   }
 }
 .seguridad {
@@ -974,7 +1299,7 @@ footer div {
   color: white;
   text-shadow: 2px 2px 4px rgb(31, 25, 25);
   padding-left: 100px;
-  padding-top: 400px;
+  padding-bottom: 50px;
   display: none;
 }
 .seguridad_img h1 {
@@ -1096,6 +1421,9 @@ footer div {
   .seguridad_equipo {
     width: 40%;
   }
+  .seguridad_unete h2 {
+    font-size: 30px;
+  }
   .seguridad article {
     flex-direction: row;
     gap: 20px;
@@ -1106,6 +1434,73 @@ footer div {
   }
   .video-responsive {
     margin-top: 20px;
+  }
+}
+@media (min-width: 1200px) {
+  .seguridad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .seguridad_top {
+    min-width: 1100px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding-left: auto;
+    padding-right: auto;
+    width: 62.5vw;
+  }
+  .seguridad_titulo-principal {
+    display: block;
+    width: 62.5vw;
+    min-width: 1100px;
+    max-width: 1200px;
+    font-family: "Lato", sans-serif;
+    font-size: 48px;
+    color: #c71711;
+    border-bottom: #606060 solid 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 40px;
+  }
+  .seguridad_img {
+    height: 500px;
+  }
+  .seguridad_img h1 {
+    display: none;
+  }
+  .seguridad_img h3 {
+    display: block;
+  }
+  .seguridad_descripcion {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  .seguridad_principal {
+    min-width: 1100px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    padding-left: auto;
+    padding-right: auto;
+    width: 62.5vw;
+  }
+  .seguridad_texto {
+    width: 70%;
+  }
+  .seguridad_entrenamiento {
+    width: 30%;
+  }
+  .seguridad_vehiculos {
+    width: 30%;
+  }
+  .seguridad_equipo {
+    width: 30%;
+  }
+  .seguridad_unete {
+    width: 50%;
+    min-width: 800px;
   }
 }
 
