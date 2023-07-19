@@ -11,7 +11,7 @@
         gap: 10px;
         padding-top: 50px;
         padding-bottom: 50px;
-        border-top: solid $c-gris 1px;
+        border-top: solid $c-bordes 1px;
     }
 
     p {
@@ -92,6 +92,12 @@
         }
     }
 
+    &_descripcion {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
     &_farmaceutica {
         display: flex;
         align-items: end;
@@ -119,12 +125,12 @@
         height: 200px;
     }
 
-    &_europa {
+    &_paraguas {
         display: flex;
         align-items: end;
-        background-image: url(../img/europa.jpg);
+        background-image: url(/img/img_paraguas.jpg);
         background-size: cover;
-        background-position: center;
+        background-position: left;
         height: 200px;
     }
 }
@@ -142,9 +148,6 @@
             padding-top: 20px;
             padding-bottom: 20px;
 
-            p {
-                width:70%;
-            }
 
         }
 
@@ -152,11 +155,15 @@
             height: 250px;
         }
 
+        &_descripcion {
+            width: 70%;
+        }
+
         &_escritorio {
             display: block;
             padding-top: 5px;
             padding-bottom: 5px;
-            border-top: solid $c-gris 1px;
+            border-top: solid $c-bordes 1px;
             color: $c-rojo;
         }
 
@@ -177,23 +184,23 @@
             margin-left: 50px;
             margin-right: 50px;
             padding-bottom: 30px;
-            border-bottom: solid $c-gris 1px;
+            border-bottom: solid $c-bordes 1px;
         }
 
         &_farmaceutica {
-            width:30%;
+            width: 30%;
         }
 
         &_medico {
-            width:30%;
+            width: 30%;
         }
 
         &_industrias {
-            width:30%;
+            width: 30%;
         }
 
-        &_europa {
-            width:30%;
+        &_paraguas {
+            width: 30%;
         }
 
     }
@@ -204,12 +211,11 @@
 
     .companias {
 
-        min-width: 1100px;
-        max-width: 1200px;
+        @include contenedor-responsive;
         display: flex;
         padding-left: auto;
         padding-right: auto;
-        width: 62.5vw;
+
 
         &_contenedor {
             display: flex;
@@ -218,9 +224,8 @@
         }
 
         &_img {
-            width: 62.5vw;
-            min-width: 1100px;
-            max-width: 1200px;
+
+            @include contenedor-responsive;
             height: 500px;
             align-items: baseline;
             padding-left: auto;
@@ -236,29 +241,23 @@
         }
 
         &_top {
-            min-width: 1100px;
-            max-width: 1200px;
+            @include contenedor-responsive;
             display: flex;
             flex-direction: column;
             padding-left: auto;
             padding-right: auto;
-            width: 62.5vw;
         }
 
         &_titulo {
             display: block;
-            width: 62.5vw;
-            min-width: 1100px;
-            max-width: 1200px;
+            @include contenedor-responsive;
 
             h1 {
-                width: 62.5vw;
-                min-width: 1100px;
-                max-width: 1200px;
+                @include contenedor-responsive;
                 font-family: $ff-principal;
                 font-size: 48px;
                 color: $c-rojo;
-                border-bottom: $c-gris solid 1px;
+                border-bottom: $c-bordes solid 1px;
                 padding-top: 10px;
                 padding-bottom: 10px;
                 margin-bottom: 40px;
@@ -276,7 +275,7 @@
                 font-size: 24px;
             }
         }
-        
+
         &_escritorio-top {
             font-size: 30px;
         }

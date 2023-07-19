@@ -5,6 +5,7 @@ $c-brojo:#c71711;
 $c-negro:#232222;
 $c-negrob:rgb(31, 25, 25);
 $c-gris:#606060;
+$c-bordes: #969696;
 $ff-principal:'Lato', sans-serif;
 $ff-lema:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 $ff-titulos_movil:Arial, Helvetica, sans-serif;
@@ -24,4 +25,10 @@ ul,
 ol {
     text-decoration: none;
     list-style: none;
+}
+
+@mixin contenedor-responsive {
+    width: 62.5vw;
+    min-width: 1100px;
+    max-width: 1200px;
 }

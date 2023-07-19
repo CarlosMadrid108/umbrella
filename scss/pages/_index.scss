@@ -1,21 +1,26 @@
 .img_principal {
     width: 100%;
     height: 208px;
-    background-image: url(../img/ciencia.png);
+    background-image: url(/img/img_principal.jpg);
     background-size: cover;
     background-position: right;
     margin-bottom: 50px;
 
     h3 {
         width: 120px;
-    font-family: $ff-lema;
-    font-size: 24px;
-    font-weight: normal;
-    font-style: italic;
-    color: $c-blanco;
-    text-shadow: 2px 2px 4px $c-negrob;
-    padding-left: 35px;
-    padding-top: 20px;
+        font-family: $ff-lema;
+        font-size: 24px;
+        font-weight: normal;
+        font-style: italic;
+        color: $c-blanco;
+        text-shadow: 2px 2px 4px $c-negrob;
+        padding-left: 35px;
+        padding-top: 20px;
+    }
+    
+    h1 {
+        color: transparent;
+        font-size: 5px;
     }
 }
 
@@ -24,15 +29,15 @@
 .index_noticias {
     display: flex;
     flex-direction: column;
-    border-top: 1px solid $c-gris;
-    border-bottom: 1px solid $c-gris;
+    border-top: 1px solid $c-bordes;
+    border-bottom: 1px solid $c-bordes;
     margin-left: 35px;
     margin-right: 35px;
     padding-top: 50px;
     padding-bottom: 50px;
     gap: 10px;
 
-    h2 {
+    h3 {
         font-family: $ff-principal;
         color: $c-negro;
         font-size: 24px;
@@ -49,26 +54,26 @@
         color: $c-gris;
     }
 
-        &-img {
-            display: flex;
-            align-items: end;
-            max-width: 100%;
-            height: 30vh;
-            background-image: url("../img/spencer.png");
-            background-size: cover;
-            background-position: 0px -20px;
-    
-            h1 {
-                background-color: $c-rojo;
-                color: $c-blanco;
-                font-size: 16px;
-                font-family: $ff-titulos_movil;
-                width: 250px;
-                text-align: center;
-                padding: 10px 10px;
-    
-            }
+    &-img {
+        display: flex;
+        align-items: end;
+        max-width: 100%;
+        height: 30vh;
+        background-image: url("../img/spencer.png");
+        background-size: cover;
+        background-position: 0px -20px;
+
+        h2 {
+            background-color: $c-rojo;
+            color: $c-blanco;
+            font-size: 16px;
+            font-family: $ff-titulos_movil;
+            width: 250px;
+            text-align: center;
+            padding: 10px 10px;
+
         }
+    }
 
 }
 
@@ -149,8 +154,8 @@
         &-img {
             height: 40vh;
             align-items: baseline;
-    
-            h1 {
+
+            h2 {
                 font-size: 20px;
                 width: 300px;
             }
@@ -198,7 +203,7 @@
         h3 {
             font-size: 48px;
             width: 450px;
-            padding-top: 50px;
+            padding-top: 100px;
             padding-left: 10vw;
         }
 
@@ -207,8 +212,8 @@
             flex-direction: row;
             justify-content: center;
         }
-        
-        
+
+
     }
 
 
@@ -221,27 +226,25 @@
         border-bottom: none 0px;
         max-width: 750px;
 
-        h2 {
+        h3 {
             font-size: 30px;
         }
 
         &-escritorio {
+            @include contenedor-responsive;
             display: flex;
-            width: 62.5vw;
-            min-width: 1100px;
-            max-width: 1200px;
             gap: 50px;
             padding-top: 50px;
             padding-bottom: 50px;
-            border-top: $c-gris solid 1px;
-            border-bottom: $c-gris solid 1px;
+            border-top: $c-bordes solid 1px;
+            border-bottom: $c-bordes solid 1px;
         }
 
         &-img {
             height: 500px;
             align-items: baseline;
-    
-            h1 {
+
+            h2 {
                 font-size: 24px;
                 width: 350px;
             }
@@ -273,8 +276,8 @@
     .segunda-subnoticia {
         padding-top: 55px;
         padding-bottom: 55px;
-        border-top: $c-gris solid 1px;
-        border-bottom: $c-gris solid 1px;
+        border-top: $c-bordes solid 1px;
+        border-bottom: $c-bordes solid 1px;
     }
 
 

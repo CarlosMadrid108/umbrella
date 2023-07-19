@@ -311,14 +311,14 @@
         justify-content: center;
         align-items: center;
         height: 172px;
-        border-bottom: #606060 solid 1px;
+        border-bottom: $c-bordes solid 1px;
 
             &_negro {
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 height: 172px;
-                border-bottom: #606060 solid 1px;
+                border-bottom: $c-bordes solid 1px;
                 background-color: black;
             }
 
@@ -329,13 +329,24 @@
         text-align: center;
         color: $c-negro;
         font-weight: 900;
+
+        :hover {
+            padding-bottom: 16px;
+            border-bottom: $c-gris solid 1px;
+        }
     }
+    
 
     .menu_negro>li {
         width: 100px;
         text-align: center;
         color: $c-bgris;
         font-weight: 900;
+
+        :hover {
+            padding-bottom: 16px;
+            border-bottom: $c-bgris solid 1px;
+        }
     }
 
     .top-nav {
@@ -389,12 +400,15 @@
         border-bottom: transparent;
         padding: 3px;
         width: 70px;
+        transition-duration: 0.5s;
+        transition-property: all;
     }
 
     button:hover {
         background-color: $c-blanco;
         color: $c-rojo;
     }
+
 
     button:active {
         box-shadow: 0px 0px 12px 0px rgba(225, 225, 225, 1);

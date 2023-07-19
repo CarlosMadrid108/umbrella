@@ -73,7 +73,7 @@
 
     &_bordes {
         padding-top: 50px;
-        border-top: solid $c-gris 1px;
+        border-top: solid $c-bordes 1px;
         padding-bottom: 50px;
     }
 
@@ -158,6 +158,13 @@
 
 }
 
+@media (min-width: 768px) and (orientation:landscape) {
+    .nuestras-noticias_img {
+        height: 500px;
+        background-position-y: center;
+    }
+}
+
 //ESCRITORIO 
 
 
@@ -166,31 +173,25 @@
 
     .nuestras-noticias {
         display: block;
-        width: 62.5vw;
-        min-width: 1100px;
-        max-width: 1200px;
+        @include contenedor-responsive;
 
         h1 {
-            width: 62.5vw;
-            min-width: 1100px;
-            max-width: 1200px;
+            @include contenedor-responsive;
             font-family: $ff-principal;
             font-size: 48px;
             color: $c-rojo;
-            border-bottom: $c-gris solid 1px;
+            border-bottom: $c-bordes solid 1px;
             padding-top: 10px;
             padding-bottom: 10px;
             margin-bottom: 40px;
         }
 
         &_contenedor {
-            min-width: 1100px;
-            max-width: 1200px;
+            @include contenedor-responsive;
             display: flex;
             gap: 50px;
             padding-left: auto;
             padding-right: auto;
-            width: 62.5vw;
         }
 
         &_main {
@@ -219,9 +220,8 @@
             h2 {
                 font-family: $ff-principal;
                 color: $c-rojo;
-                border-bottom: solid 1px $c-gris;
+                border-bottom: solid 1px $c-bordes;
                 padding-bottom: 10px;
-
                 font-size: 30px;
 
             }
@@ -231,7 +231,7 @@
                 flex-direction: column;
                 gap: 10px;
                 padding-bottom: 30px;
-                border-bottom: solid 1px $c-gris;
+                border-bottom: solid 1px $c-bordes;
                 margin-bottom: 30px;
 
                 h3 {
