@@ -460,7 +460,7 @@ footer div {
 .img_principal {
   width: 100%;
   height: 208px;
-  background-image: url(/img/img_principal.jpg);
+  background-image: url(../img/img_principal.jpg);
   background-size: cover;
   background-position: right;
   margin-bottom: 50px;
@@ -890,19 +890,19 @@ footer div {
   padding-bottom: 50px;
 }
 .nuestras-noticias_primera {
-  background-image: url(/img/adnnoticia.jpg);
+  background-image: url(../img/adnnoticia.jpg);
   background-size: cover;
   max-width: 100%;
   height: 25vh;
 }
 .nuestras-noticias_segunda {
-  background-image: url(/img/evolucionnoticia.jpg);
+  background-image: url(../img/evolucionnoticia.jpg);
   background-size: cover;
   max-width: 100%;
   height: 25vh;
 }
 .nuestras-noticias_tercera {
-  background-image: url(/img/insectosnoticia.jpg);
+  background-image: url(../img/insectosnoticia.jpg);
   background-size: cover;
   max-width: 100%;
   height: 25vh;
@@ -1155,7 +1155,7 @@ footer div {
 .companias_paraguas {
   display: flex;
   align-items: end;
-  background-image: url(/img/img_paraguas.jpg);
+  background-image: url(../img/img_paraguas.jpg);
   background-size: cover;
   background-position: left;
   height: 200px;
