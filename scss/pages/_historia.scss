@@ -14,7 +14,7 @@
     h1 {
         background-color: $c-rojo;
         color: $c-blanco;
-        font-size: 16px;
+        font-size: 1rem;
         font-family: $ff-titulos_movil;
         width: 250px;
         text-align: center;
@@ -38,7 +38,7 @@
     font-family: $ff-principal;
 
     h2 {
-        font-size: 24px;
+        font-size: 1.5rem;
         color: $c-negro;
         text-align: center;
     }
@@ -96,23 +96,18 @@
 
         h1 {
             @include contenedor-responsive;
-            font-family: $ff-principal;
-            font-size: 48px;
+            @include titulo-principal;
             color: $c-rojo;
-            border-bottom: $c-bordes solid 1px;
-            padding-top: 10px;
-            padding-bottom: 10px;
         }
     }
 
 
     .img_historia {
-        @include contenedor-responsive; 
+        @include contenedor-responsive;
         height: 500px;
         align-items: baseline;
         padding-left: auto;
         padding-right: auto;
-        margin-top: 40px;
 
         h1 {
             display: none;
@@ -122,7 +117,7 @@
             display: block;
             width: 362px;
             font-family: $ff-lema;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: normal;
             font-style: italic;
             color: $c-blanco;
@@ -138,7 +133,7 @@
         gap: 20px;
 
         h2 {
-            font-size: 30px;
+            font-size: 1.875rem;
         }
     }
 

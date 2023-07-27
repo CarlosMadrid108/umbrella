@@ -81,13 +81,11 @@ ol {
   padding: 0;
   font-family: "Lato", sans-serif;
 }
-
-.menu > li {
+.menu_negro > li {
   margin: 0 1rem;
   overflow: hidden;
 }
-
-.menu_negro > li {
+.menu > li {
   margin: 0 1rem;
   overflow: hidden;
 }
@@ -207,6 +205,15 @@ ol {
     justify-content: center;
     align-items: center;
   }
+  .menu > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
+  }
   .menu_negro {
     position: absolute;
     top: 0;
@@ -216,6 +223,15 @@ ol {
     width: 100%;
     justify-content: center;
     align-items: center;
+  }
+  .menu_negro > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    color: white;
+    background-color: #222;
   }
   #menu-toggle ~ .menu li {
     height: 0;
@@ -243,24 +259,6 @@ ol {
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-  .menu > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
-  .menu_negro > li {
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0.5em 0;
-    width: 100%;
-    color: white;
-    background-color: #222;
-  }
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
@@ -274,14 +272,14 @@ ol {
     text-align: center;
     color: white;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .menu_negro > li {
     width: 100px;
     text-align: center;
     color: white;
     font-weight: 900;
-    font-size: 14px;
+    font-size: 0.875rem;
   }
   .top-nav {
     height: 70px;
@@ -304,7 +302,7 @@ ol {
     align-items: center;
     height: 172px;
     border-bottom: #969696 solid 1px;
-    background-color: black;
+    background-color: #0e0e0e;
   }
   .menu > li {
     width: 100px;
@@ -332,7 +330,7 @@ ol {
     min-width: 1100px;
   }
   .top-nav_negro {
-    background-color: black;
+    background-color: #0e0e0e;
     width: 62.5vw;
     min-width: 1100px;
   }
@@ -468,7 +466,7 @@ footer div {
 .img_principal h3 {
   width: 120px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: normal;
   font-style: italic;
   color: white;
@@ -478,7 +476,7 @@ footer div {
 }
 .img_principal h1 {
   color: transparent;
-  font-size: 5px;
+  font-size: 0.5rem;
 }
 
 .index_noticias {
@@ -495,7 +493,7 @@ footer div {
 .index_noticias h3 {
   font-family: "Lato", sans-serif;
   color: #232222;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 .index_noticias p {
   font-family: "Lato", sans-serif;
@@ -518,7 +516,7 @@ footer div {
 .index_noticias-img h2 {
   background-color: #b70f0a;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   width: 250px;
   text-align: center;
@@ -552,7 +550,7 @@ footer div {
 .index_voluntarios span {
   font-family: "Lato", sans-serif;
   text-align: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #606060;
 }
 
@@ -574,7 +572,7 @@ footer div {
     height: 250px;
   }
   .img_principal h3 {
-    font-size: 28px;
+    font-size: 1.75rem;
     width: 200px;
     padding-left: 70px;
   }
@@ -587,7 +585,7 @@ footer div {
     align-items: baseline;
   }
   .index_noticias-img h2 {
-    font-size: 20px;
+    font-size: 1.25rem;
     width: 300px;
   }
   .img_voluntarios {
@@ -617,7 +615,7 @@ footer div {
     width: 100%;
   }
   .img_principal h3 {
-    font-size: 48px;
+    font-size: 3rem;
     width: 450px;
     padding-top: 100px;
     padding-left: 10vw;
@@ -637,7 +635,7 @@ footer div {
     max-width: 750px;
   }
   .index_noticias h3 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .index_noticias-escritorio {
     width: 62.5vw;
@@ -655,7 +653,7 @@ footer div {
     align-items: baseline;
   }
   .index_noticias-img h2 {
-    font-size: 24px;
+    font-size: 1.5rem;
     width: 350px;
   }
   .index_subnoticias {
@@ -665,7 +663,7 @@ footer div {
   }
   .index_subnoticias h3 {
     font-family: "Lato", sans-serif;
-    font-size: 30px;
+    font-size: 1.875rem;
     padding-bottom: 25px;
     color: #232222;
   }
@@ -687,7 +685,7 @@ footer div {
     width: 100%;
   }
   .index_voluntarios h2 {
-    font-size: 40px;
+    font-size: 2.5rem;
   }
   .index_voluntarios p {
     max-width: 800px;
@@ -712,7 +710,7 @@ footer div {
 .img_historia h1 {
   background-color: #b70f0a;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   width: 250px;
   text-align: center;
@@ -733,7 +731,7 @@ footer div {
   font-family: "Lato", sans-serif;
 }
 .nuestra-historia_articulo h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #232222;
   text-align: center;
 }
@@ -784,11 +782,12 @@ footer div {
     min-width: 1100px;
     max-width: 1200px;
     font-family: "Lato", sans-serif;
-    font-size: 48px;
-    color: #b70f0a;
+    font-size: 3rem;
     border-bottom: #969696 solid 1px;
     padding-top: 10px;
     padding-bottom: 10px;
+    margin-bottom: 40px;
+    color: #b70f0a;
   }
   .img_historia {
     width: 62.5vw;
@@ -798,7 +797,6 @@ footer div {
     align-items: baseline;
     padding-left: auto;
     padding-right: auto;
-    margin-top: 40px;
   }
   .img_historia h1 {
     display: none;
@@ -807,7 +805,7 @@ footer div {
     display: block;
     width: 362px;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-    font-size: 48px;
+    font-size: 3rem;
     font-weight: normal;
     font-style: italic;
     color: white;
@@ -821,7 +819,7 @@ footer div {
     gap: 20px;
   }
   .nuestra-historia_articulo h2 {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 .nuestras-noticias {
@@ -868,7 +866,7 @@ footer div {
   width: 100%;
 }
 .nuestras-noticias_principal h2 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #232222;
 }
 .nuestras-noticias_principal p {
@@ -967,12 +965,12 @@ footer div {
     min-width: 1100px;
     max-width: 1200px;
     font-family: "Lato", sans-serif;
-    font-size: 48px;
-    color: #b70f0a;
+    font-size: 3rem;
     border-bottom: #969696 solid 1px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 40px;
+    color: #b70f0a;
   }
   .nuestras-noticias_contenedor {
     width: 62.5vw;
@@ -1008,7 +1006,7 @@ footer div {
     color: #b70f0a;
     border-bottom: solid 1px #969696;
     padding-bottom: 10px;
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .nuestras-noticias_secundaria article {
     display: flex;
@@ -1071,7 +1069,7 @@ footer div {
 .companias_img h1 {
   background-color: #b70f0a;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   width: 250px;
   text-align: center;
@@ -1080,7 +1078,7 @@ footer div {
 .companias_img h3 {
   width: 350px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: normal;
   font-style: italic;
   color: white;
@@ -1101,7 +1099,7 @@ footer div {
 .companias_movil {
   background-color: #b70f0a;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Arial, Helvetica, sans-serif;
   width: 250px;
   text-align: center;
@@ -1194,7 +1192,7 @@ footer div {
     color: #b70f0a;
   }
   .companias_movil {
-    color: transparent;
+    display: none;
     background-color: transparent;
   }
   .companias_articulo {
@@ -1265,12 +1263,12 @@ footer div {
     min-width: 1100px;
     max-width: 1200px;
     font-family: "Lato", sans-serif;
-    font-size: 48px;
-    color: #b70f0a;
+    font-size: 3rem;
     border-bottom: #969696 solid 1px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 40px;
+    color: #b70f0a;
   }
   .companias_articulo {
     display: flex;
@@ -1280,17 +1278,17 @@ footer div {
     margin-right: 0px;
   }
   .companias_articulo h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
   .companias_escritorio-top {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
   .companias_escritorio {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 }
 .seguridad {
-  background-color: #000000;
+  background-color: #0e0e0e;
 }
 .seguridad_titulo-principal {
   display: none;
@@ -1301,7 +1299,7 @@ footer div {
 .seguridad_titulos-moviles {
   background-color: #b70f0a;
   color: white;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: Arial, Helvetica, sans-serif;
   width: 200px;
   text-align: center;
@@ -1318,7 +1316,7 @@ footer div {
 .seguridad_img h3 {
   width: 350px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  font-size: 48px;
+  font-size: 3rem;
   font-weight: normal;
   font-style: italic;
   color: white;
@@ -1330,7 +1328,7 @@ footer div {
 .seguridad_img h1 {
   background-color: #b70f0a;
   color: white;
-  font-size: 16px;
+  font-size: 1rem;
   font-family: Arial, Helvetica, sans-serif;
   width: 250px;
   text-align: center;
@@ -1450,7 +1448,7 @@ footer div {
     width: 40%;
   }
   .seguridad_unete h2 {
-    font-size: 30px;
+    font-size: 2.5rem;
   }
   .seguridad article {
     flex-direction: row;
@@ -1485,12 +1483,12 @@ footer div {
     min-width: 1100px;
     max-width: 1200px;
     font-family: "Lato", sans-serif;
-    font-size: 48px;
-    color: #c71711;
+    font-size: 3rem;
     border-bottom: #969696 solid 1px;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 40px;
+    color: #c71711;
   }
   .seguridad_img {
     height: 500px;

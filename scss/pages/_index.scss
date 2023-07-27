@@ -9,7 +9,7 @@
     h3 {
         width: 120px;
         font-family: $ff-lema;
-        font-size: 24px;
+        font-size: 1.5rem;
         font-weight: normal;
         font-style: italic;
         color: $c-blanco;
@@ -17,10 +17,10 @@
         padding-left: 35px;
         padding-top: 20px;
     }
-    
+
     h1 {
         color: transparent;
-        font-size: 5px;
+        font-size: 0.5rem;
     }
 }
 
@@ -40,7 +40,7 @@
     h3 {
         font-family: $ff-principal;
         color: $c-negro;
-        font-size: 24px;
+        font-size: 1.5rem;
     }
 
     p {
@@ -66,7 +66,7 @@
         h2 {
             background-color: $c-rojo;
             color: $c-blanco;
-            font-size: 16px;
+            font-size: 1rem;
             font-family: $ff-titulos_movil;
             width: 250px;
             text-align: center;
@@ -109,7 +109,7 @@
     span {
         font-family: $ff-principal;
         text-align: center;
-        font-size: 12px;
+        font-size: 0.75rem;
         color: $c-gris;
     }
 }
@@ -139,7 +139,7 @@
         height: 250px;
 
         h3 {
-            font-size: 28px;
+            font-size: 1.75rem;
             width: 200px;
             padding-left: 70px;
         }
@@ -156,7 +156,7 @@
             align-items: baseline;
 
             h2 {
-                font-size: 20px;
+                font-size: 1.25rem;
                 width: 300px;
             }
         }
@@ -201,7 +201,7 @@
         width: 100%;
 
         h3 {
-            font-size: 48px;
+            font-size: 3rem;
             width: 450px;
             padding-top: 100px;
             padding-left: 10vw;
@@ -227,7 +227,7 @@
         max-width: 750px;
 
         h3 {
-            font-size: 30px;
+            font-size: 1.875rem;
         }
 
         &-escritorio {
@@ -245,7 +245,7 @@
             align-items: baseline;
 
             h2 {
-                font-size: 24px;
+                font-size: 1.5rem;
                 width: 350px;
             }
         }
@@ -260,7 +260,7 @@
 
         h3 {
             font-family: $ff-principal;
-            font-size: 30px;
+            font-size: 1.875rem;
             padding-bottom: 25px;
             color: $c-negro;
         }
@@ -288,12 +288,16 @@
         width: 100%;
     }
 
-    .index_voluntarios h2 {
-        font-size: 40px;
+    .index_voluntarios {
+        h2 {
+            font-size: 2.5rem;
+        }
     }
 
-    .index_voluntarios p {
-        max-width: 800px;
+    .index_voluntarios {
+        p {
+            max-width: 800px;
+        }
     }
 
     .img_voluntarios {

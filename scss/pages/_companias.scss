@@ -30,7 +30,7 @@
         h1 {
             background-color: $c-rojo;
             color: $c-blanco;
-            font-size: 16px;
+            font-size: 1rem;
             font-family: $ff-titulos_movil;
             width: 250px;
             text-align: center;
@@ -40,7 +40,7 @@
         h3 {
             width: 350px;
             font-family: $ff-lema;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: normal;
             font-style: italic;
             color: $c-blanco;
@@ -66,7 +66,7 @@
     &_movil {
         background-color: $c-rojo;
         color: $c-blanco;
-        font-size: 14px;
+        font-size: 0.875rem;
         font-family: $ff-titulos_movil;
         width: 250px;
         text-align: center;
@@ -135,6 +135,8 @@
     }
 }
 
+//TABLET
+
 @media (min-width: 768px) {
     .companias {
         margin-left: 50px;
@@ -175,7 +177,7 @@
         }
 
         &_movil {
-            color: transparent;
+            display: none;
             background-color: transparent;
 
         }
@@ -205,6 +207,8 @@
 
     }
 }
+
+//ESCRITORIO
 
 @media (min-width: 1200px) {
 
@@ -254,13 +258,8 @@
 
             h1 {
                 @include contenedor-responsive;
-                font-family: $ff-principal;
-                font-size: 48px;
+                @include titulo-principal;
                 color: $c-rojo;
-                border-bottom: $c-bordes solid 1px;
-                padding-top: 10px;
-                padding-bottom: 10px;
-                margin-bottom: 40px;
             }
         }
 
@@ -272,16 +271,16 @@
             margin-right: 0px;
 
             h3 {
-                font-size: 24px;
+                font-size: 1.5rem;
             }
         }
 
         &_escritorio-top {
-            font-size: 30px;
+            font-size: 1.875rem;
         }
 
         &_escritorio {
-            font-size: 30px;
+            font-size: 1.875rem;
         }
 
     }

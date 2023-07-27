@@ -1,10 +1,10 @@
 .seguridad {
-    background-color: #000000;
+    background-color: $c-negro_seguridad;
 
     &_titulo-principal {
         display: none;
     }
-    
+
 
     &_titulos {
         display: none;
@@ -13,8 +13,8 @@
     &_titulos-moviles {
         background-color: $c-rojo;
         color: $c-blanco;
-        font-size: 14px;
-        font-family: Arial, Helvetica, sans-serif;
+        font-size: 0.875rem;
+        font-family: $ff-titulos_movil;
         width: 200px;
         text-align: center;
         padding: 10px 10px;
@@ -27,11 +27,11 @@
         background-size: cover;
         display: flex;
         align-items: end;
-    
+
         h3 {
             width: 350px;
             font-family: $ff-lema;
-            font-size: 48px;
+            font-size: 3rem;
             font-weight: normal;
             font-style: italic;
             color: $c-blanco;
@@ -40,12 +40,12 @@
             padding-bottom: 50px;
             display: none;
         }
-    
+
         h1 {
             background-color: $c-rojo;
             color: $c-blanco;
-            font-size: 16px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-size: 1rem;
+            font-family: $ff-titulos_movil;
             width: 250px;
             text-align: center;
             padding: 10px 10px;
@@ -152,7 +152,7 @@
             margin-left: 50px;
             margin-right: 50px;
         }
-        
+
         &_img {
             height: 250px;
         }
@@ -188,9 +188,9 @@
         }
 
         &_unete {
-            
+
             h2 {
-                font-size: 30px;
+                font-size: 2.5rem;
             }
         }
 
@@ -199,7 +199,7 @@
             gap: 20px;
 
             h2 {
-                color:$c-brojo;
+                color: $c-brojo;
                 padding-bottom: 10px;
             }
         }
@@ -231,13 +231,9 @@
         &_titulo-principal {
             display: block;
             @include contenedor-responsive;
-            font-family: $ff-principal;
-            font-size: 48px;
+            @include titulo-principal;
             color: $c-brojo;
-            border-bottom: $c-bordes solid 1px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            margin-bottom: 40px;
+
         }
 
         &_img {
@@ -248,7 +244,7 @@
             }
 
             h3 {
-                display:block
+                display: block
             }
         }
 
